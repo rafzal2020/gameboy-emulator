@@ -6,7 +6,9 @@ instruction instructions[0x100] = {
     [0x05] = {IN_DEC, AM_R, RT_B},
     [0x0E] = {IN_LD, AM_R_D8, RT_C},
     [0xAF] = {IN_XOR, AM_R, RT_A},
-    [0xC3] = {IN_JP, AM_D16}
+    [0xC3] = {IN_JP, AM_D16},
+    [0xF3] = {IN_DI},
+    [0x31] = {IN_LD, AM_D16, RT_SP}
 };
 
 instruction *instruction_by_opcode(u8 opcode) {
